@@ -11,7 +11,9 @@ Install
 - optionnaly protect this dir with some basic http auth
 - and tweak the css
 
-    alias shoot="scrot -s -b -t 15 -e 'scp -pC *_grab*png yourdomain.com:shoot/ && echo http://yourdomain.com/shoot/\$f' '%Y-%m-%d-%H-%M_grab.png' && rm -f *_grab*png"
+```
+alias shoot="scrot -s -b -t 15 -e 'scp -pC *_grab*png yourdomain.com:shoot/ && echo http://yourdomain.com/shoot/\$f' '%Y-%m-%d-%H-%M_grab.png' && rm -f *_grab*png"
+```
 
 Example
 -------------
