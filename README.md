@@ -8,7 +8,7 @@ Install
 -------------
 - Just get the `index.php` and drop it in a dir in your web tree
 - create an alias and change the scp destination part as indicated on the web page.
-  `shoot="scrot -s -b -t 15 -e 'scp -pC *_grab*png yourdomain.com:shoot/ && echo http://yourdomain.com/shoot/\$f' '%Y-%m-%d-%H-%M_grab.png' && rm -f *_grab*png"`
+    shoot="scrot -s -b -t 15 -e 'scp -pC *_grab*png yourdomain.com:shoot/ && echo http://yourdomain.com/shoot/\$f' '%Y-%m-%d-%H-%M_grab.png' && rm -f *_grab*png"
 - optionnaly protect this dir with some basic http auth
 - and tweak the css
 
@@ -21,7 +21,7 @@ License
 --------------
 This piece of code is available under Public Domain.
 
-Copyleft
+Copy is Right
 --------------
 Copyleft (c) 2003-2015 mose
 
