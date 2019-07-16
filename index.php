@@ -51,7 +51,7 @@ div, pre {
 <a href="http://mose.com">mose</a>
 <a href="index.php">shoots</a>
 </div>
-<?
+<?php
 if (isset($_GET['shoot'])) {
 	$shoot = preg_replace("/[^-0-9]/","",$_GET['shoot']);
 	echo '<div align="center"><img src="'.$shoot.'_grab.png"';
@@ -60,7 +60,7 @@ if (isset($_GET['shoot'])) {
 }
 ?>
 <div>
-<?
+<?php
 if (isset($_GET['s'])) {
 	$s = preg_replace("/[^0-9]/","",$_GET['s']);
 } else {
@@ -77,15 +77,15 @@ for ($i=$s;$i<$s+5;$i++) {
 }
 ?>
 </div>
-<?
+<?php
 for ($i=0;$i<$nb;$i++) {
 	echo '<a href="index.php?s='.$i.'"';
 	if ($i >= $s and $i < $s+5) { echo ' class="on"'; }
 	echo '>'.$shoots[$i].'</a> ';
 }
 ?>
-<pre>alias shoot="scrot -s -b -t 15 -e 'scp -pC *_grab*png mose.com:shoot/ &amp;&amp; echo http://eye.mose.com/\$f' '%Y-%m-%d-%H-%M_grab.png' &amp;&amp; rm -f *_grab*png"</pre>
-<pre><?
+<pre>alias shoot="scrot -s -b -t 15 -e 'scp -pC *_grab*png eye.mose.com:shoot/ &amp;&amp; echo http://eye.mose.com/\$f' '%Y-%m-%d-%H-%M_grab.png' &amp;&amp; rm -f *_grab*png"</pre>
+<pre><?php
 ini_set('highlight.comment','#666666');
 ini_set('highlight.default','#decebe');
 ini_set('highlight.html',   '#6688AA');
